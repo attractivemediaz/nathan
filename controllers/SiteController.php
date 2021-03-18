@@ -68,6 +68,14 @@ class SiteController extends Controller
         }
         return $this->render('index');
     }
+	
+	public function actionPopup()
+    {
+        if (Yii::$app->user->isGuest) {		
+            $this->redirect(Yii::$app->urlManager->createUrl('/site/login'));
+        }
+        return $this->render('popup');
+    }
 
     /**
      * Login action.

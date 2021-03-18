@@ -1,3 +1,17 @@
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+use yii\helpers\Url;
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use frontend\assets\AppAsset;
+use common\widgets\Alert;
+use aneeshikmat\yii2\Yii2TimerCountDown\Yii2TimerCountDown;
+
+?>
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -26,19 +40,19 @@
         </form>
         <!-- /.search form -->
 
-        <?php /* = dmstr\widgets\Menu::widget(
+        <?php  echo dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
+                   // ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
+                   // ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
+                   // ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
-                        'label' => 'Some tools',
+                        'label' => 'Popup',
                         'icon' => 'share',
-                        'url' => '#',
-                        'items' => [
+                        'url' => Url::base().'/site/popup',
+                        /* 'items' => [
                             ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
                             ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
                             [
@@ -58,11 +72,11 @@
                                     ],
                                 ],
                             ],
-                        ],
+                        ], */
                     ],
                 ],
             ]
-        )  */?>
+        )  ?>
 
     </section>
 
